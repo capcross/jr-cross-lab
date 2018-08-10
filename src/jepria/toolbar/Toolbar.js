@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function (props) {
   return (
-    <div>Toolbar</div>
+    props.render
   );
 };

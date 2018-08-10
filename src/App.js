@@ -4,14 +4,15 @@ import Form from './jepria/form/Form';
 import Statusbar from './jepria/statusbar/Statusbar';
 
 class App extends Component {
+
   render() {
 
     return (
-      <div>
-        <Toolbar/>
+      <React.Fragment>
+        <Toolbar render={<div>Toolbar-web</div>}/>
         <Form/>
         <Statusbar/>
-      </div>
+      </React.Fragment>
     );
   }
 }
