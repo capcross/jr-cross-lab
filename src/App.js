@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import JRBoard from './jepria/board/JRBoard';
 import Toolbar from './jepria/toolbar/Toolbar';
 import Form from './jepria/form/Form';
 import Statusbar from './jepria/statusbar/Statusbar';
@@ -8,11 +10,13 @@ class App extends Component {
   render() {
 
     return (
-      <React.Fragment>
-        <Toolbar render={<div>Toolbar-web</div>}/>
-        <Form/>
-        <Statusbar/>
-      </React.Fragment>
+        <JRBoard render={(workstate) => (
+          <React.Fragment>
+            <Toolbar workstate={workstate}/>
+            <Form workstate={workstate}/>
+            <Statusbar workstate={workstate}/>
+          </React.Fragment>
+        )}/>
     );
   }
 }
