@@ -1,5 +1,11 @@
 import React from 'react';
 
+const toolbarButtonStyle = {
+  backgroundColor: 'transparent',
+  border: 'none',
+  cursor: 'pointer',
+};
+
 export default {
   toolbar: props =>
     <React.Fragment>
@@ -8,12 +14,15 @@ export default {
       <div>ToolbarWebEnd</div>
     </React.Fragment>
   ,
-  toolbarButton: props =>
-    <React.Fragment>
-      <div>ToolbarButtonWebBegin</div>
-      <div>title={props.title}-web</div>
-      <div>disabled={JSON.stringify(props.disabled)}</div>
-      <div>ToolbarButtonWebEnd</div>
-    </React.Fragment>
-  ,
+  toolbarButton: props => {
+    const handleClick = (e) => {
+      e.preventDefault();
+      props.onClick();
+    }
+    return (
+      <button onClick={handleClick} disabled={props.disabled} style={toolbarButtonStyle}>
+        {props.title}
+      </button>
+    )
+  }
 }

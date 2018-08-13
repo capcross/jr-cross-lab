@@ -32,12 +32,11 @@ const actions = {
     this.setState({ workstate: Workstate.VIEW_LIST });
   },
   view: selectedIndex => {
-    console.log("App.view()");
     console.log("App.view(): selectedIndex = " + selectedIndex);
-    this.setState({
-      workstate: Workstate.VIEW_DETAILS,
-      currentIndex: selectedIndex ? selectedIndex : this.state.currentIndex,
-    });
+    // this.setState({
+    //   workstate: Workstate.VIEW_DETAILS,
+    //   currentIndex: selectedIndex ? selectedIndex : this.state.currentIndex,
+    // });
   },
   list: () => {
     console.log("App.list()");
