@@ -10,20 +10,10 @@ export default {
   ,
   toolbarButton: props =>
     <React.Fragment>
-      <div>ToolbarWebBegin</div>
-        {props.renderButtons()}
-      <div>ToolbarWebEnd</div>
+      <div>ToolbarButtonWebBegin</div>
+      <div>title={props.title}-web</div>
+      <div>disabled={JSON.stringify(props.disabled)}</div>
+      <div>ToolbarButtonWebEnd</div>
     </React.Fragment>
   ,
 }
-// const toolbar = function (props) {
-//   return (
-//     <React.Fragment>
-//       <div>ToolbarWebBegin</div>
-//         {props.renderButtons()}
-//       <div>ToolbarWebEnd</div>
-//     </React.Fragment>
-//   );
-// };
-
-//export {toolbar};
