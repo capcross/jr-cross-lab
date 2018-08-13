@@ -17,8 +17,8 @@ const App = () => {
         <Toolbar impl={jrwidgets.toolbar} renderButtons = { () => {
           return (
             <React.Fragment>
-              <ViewButton title="ViewButtonTitle" impl={jrwidgets.toolbarButton} workstate={workstate} onClick={actions.view}/>
-              {/* <ListButton workstate={workstate} onClick={actions.list}/> */}
+              <ViewButton title="Просмотр" impl={jrwidgets.toolbarButton} workstate={workstate} onClick={actions.view}/>
+              <ListButton title="Список" impl={jrwidgets.toolbarButton}  workstate={workstate} onClick={actions.list}/>
             </React.Fragment>
           )
         }}/>

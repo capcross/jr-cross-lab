@@ -19,9 +19,21 @@ export default {
       e.preventDefault();
       props.onClick();
     }
+
     return (
-      <button onClick={handleClick} disabled={props.disabled} style={toolbarButtonStyle}>
-        {props.title}
+      // <button onClick={handleClick} disabled={props.disabled} style={toolbarButtonStyle}>
+      //   {
+      //     props.src ?
+      //       <img src={props.src} alt={props.title} className={props.disabled ? "disabled" : "enabled"}/> :
+      //       props.title
+      //   }
+      // </button>
+      <button onClick={handleClick} style={toolbarButtonStyle}>
+        {
+          props.src ?
+            <img src={props.src} alt={props.title} className={props.disabled ? "disabled" : "enabled"}/> :
+            props.title
+        }
       </button>
     )
   }

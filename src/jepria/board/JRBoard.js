@@ -40,7 +40,7 @@ const actions = {
   },
   list: () => {
     console.log("App.list()");
-    this.setState({ workstate: Workstate.VIEW_LIST });
+    // this.setState({ workstate: Workstate.VIEW_LIST });
   },
   delete: () => {
     console.log("App.delete()");

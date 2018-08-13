@@ -1,13 +1,14 @@
-import React from 'react';
 import {Workstate} from '../../board/state/workstate';
 
-const  ListButton = props => {
+export default function (props) {
   const workstate = props.workstate;
-  const isDisabled = !(workstate === Workstate.EDIT || workstate === Workstate.SELECTED);
+  const isDisabled = !(workstate === Workstate.ADD ||
+                       workstate === Workstate.EDIT ||
+                       workstate === Workstate.VIEW_DETAILS);
 
-  return (
-      isDisabled ? <div>ListButtonDisabledWeb</div> : <div>ListButtonEnabledWeb</div>
-  )
+  return props.impl({
+    title: props.title,
+    disabled: isDisabled,
+    onClick: props.onClick,
+  })
 };
-
-export default ListButton;
