@@ -9,9 +9,7 @@ const toolbarButtonStyle = {
 export default {
   toolbar: props =>
     <React.Fragment>
-      <div>ToolbarWebBegin</div>
         {props.renderButtons()}
-      <div>ToolbarWebEnd</div>
     </React.Fragment>
   ,
   toolbarButton: props => {
@@ -21,13 +19,6 @@ export default {
     }
 
     return (
-      // <button onClick={handleClick} disabled={props.disabled} style={toolbarButtonStyle}>
-      //   {
-      //     props.src ?
-      //       <img src={props.src} alt={props.title} className={props.disabled ? "disabled" : "enabled"}/> :
-      //       props.title
-      //   }
-      // </button>
       <button onClick={handleClick} style={toolbarButtonStyle}>
         {
           props.src ?
